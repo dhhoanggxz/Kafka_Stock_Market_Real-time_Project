@@ -1,0 +1,37 @@
+ERROR:
+
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ ssh -i "kafka-stock-market-project-key.pem" ec2-user@ec2-13-212-88-23.ap-southeast-1.compute.amazonaws.com
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0555 for 'kafka-stock-market-project-key.pem' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "kafka-stock-market-project-key.pem": bad permissions
+ec2-user@ec2-13-212-88-23.ap-southeast-1.compute.amazonaws.com: Permission denied (publickey,gssapi-keyex,gssapi-with-mic).
+
+--------------------- FIX --------------------- 
+
+FROM:
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ ls -l kafka-stock-market-project-key.pem
+-r-xr-xr-x 1 dhhoanggxz dhhoanggxz 1678 Oct 12 10:26 kafka-stock-market-project-key.pem
+
+TO:
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ mv /mnt/e/project/pro\ kafka/kafka-stock-market-project-key.pem ~/
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ chmod 400 ~/kafka-stock-market-project-key.pem
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ ls -l ~/kafka-stock-market-project-key.pem
+-r-------- 1 dhhoanggxz dhhoanggxz 1678 Oct 12 10:26 /home/dhhoanggxz/kafka-stock-market-project-key.pem
+
+dhhoanggxz@Admin:/mnt/e/project/pro kafka$ ssh -i "~/kafka-stock-market-project-key.pem" ec2-user@ec2-13-212-88-23.ap-southeast-1.compute.amazonaws.com
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Oct 12 04:36:27 2024 from 113.161.39.115
+[ec2-user@ip-172-31-40-245 ~]$

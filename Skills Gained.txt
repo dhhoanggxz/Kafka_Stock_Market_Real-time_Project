@@ -1,0 +1,12 @@
+SKILLS:
+
+- Ubuntu
+- AWS:
+    + EC2 (Xây dựng và quản lý Instance cho quá trình Kafka)
+    + S3 (Lưu trữ dữ liệu)
+    + Glue (Crawl dữ liệu và tạo database)
+    + Athena (Truy vấn dữ liệu bằng SQL)
+    + IAM (Quản lý quyền truy cập)
+- Kafka (Thiết lập producer và consumer)
+- Zookeeper (Quản lý trạng thái của Kafka)
+- Python (Lập trình và xử lý dữ liệu trong Jupyter Notebook)

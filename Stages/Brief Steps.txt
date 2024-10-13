@@ -1,0 +1,10 @@
+- Cài đặt môi trường: Ubuntu, Java, Kafka.
+- Khởi động Zookeeper và Kafka: Sử dụng các lệnh thích hợp và chỉnh sửa cấu hình nếu cần.
+- Cấu hình IP: Chỉnh sửa server.properties để sử dụng IP Public.
+- Tạo Producers và Consumers: Sử dụng lệnh để tạo topic và mở các phiên Ubuntu khác cho Producer và Consumer.
+- Cấu hình AWS: Tạo IAM role và Access Key.
+- Cấu hình AWS CLI: Nhập thông tin truy cập AWS.
+- Sử dụng Jupyter Notebook: Viết mã cho Producer và Consumer, cài đặt các thư viện cần thiết.
+- Crawl Data từ S3 bằng AWS Glue: Tạo Crawler và Database.
+- Truy vấn dữ liệu bằng AWS Athena: Viết câu truy vấn SQL.
+- Lấy dữ liệu trực tiếp từ web (nếu cần): Sử dụng API để lấy dữ liệu real-time.
